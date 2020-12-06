@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>About Us</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	<style>
+body{
+    font-family: 'Lato', sans-serif;
+}
+/*===Navbar===*/
+#nav{
+    position:fixed;
+    width: 250px;
+    height: 100%;
+    background: #000;
+    left: -250px;
+    transition: all .5s linear;
+}
+#nav.active{
+    left:0;
+}
+#nav ul li{
+    list-style-type: none;
+    color:#fff;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: 1px solid #cba63f;
+}
+
+#nav .toggle-btn{
+    position: absolute;
+    left: 260px;
+    top: 20px;
+}
+#nav .toggle-btn span{
+    display: block;
+    width: 45px;
+    height: 10px;
+    background: orange;
+    margin: 3px 0px;
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 10px;
+}
+i{
+    color: #fff;
+    margin: 12.5px;
+    cursor: pointer;
+}
+    /*================*/
+
+
+#hero{
+    display:table;
+    width: 100%;
+    height: 100vh;
+    background: url(https://c.pxhere.com/photos/4e/3e/apple_Black_CC0_Photos_Cellphone_Desk_Device_Free_Images_Free_Photos-1616215.jpg!d)/*(banner.png)*/ top center;
+    background-size: cover;
+}
+@media (min-width: 1024px){
+    #hero{
+        background-attachment: fixed;
+    }
+}
+#hero .hero-logo{
+    margin:20px;
+}
+#hero .hero-logo img{
+    max-width: 25%;
+}
+#hero .hero-container{
+    background: rgba(18,19,19, 0.4);
+    display: table-cell;
+    margin:0;
+    padding:0;
+    text-align: center;
+    vertical-align: middle;
+}
+#hero h1{
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 75px;
+}
+@media (max-width: 768px){
+    #hero h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+#hero h2{
+    color:#fff;
+    margin-bottom: 50px;
+}
+@media (max-width: 768px){
+    #hero h2{
+        font-size:24px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+    
+}
+#hero .actions a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+} 
+#hero .main-1{
+    background: #eb9a03;
+    border: 2px solid #eb9a03;
+    color:#000;
+    font-weight: bold;
+}
+#hero .main-1:hover{
+    background: none;
+    border: 2px solid #fff;
+    color:#fff;
+    text-decoration: none;
+}
+#hero .main-2{
+    border: 2px solid #fff;
+    color:#fff;
+}
+#hero .main-2:hover{
+    background: #eb9a03;
+    border: 2px solid #eb9a03;
+    text-decoration: none;
+}
+b{
+    color:#f44336;
+}
+
+#h3_1{
+    color: black;
+}
+
+/* Log In*/
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  font-size: 14px;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.modal-container{
+    margin: 5% auto 15% auto;
+    width: 510px;
+    background-color: #fff;
+}
+
+#Google{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px auto;
+}
+#face1{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.closed{
+    position: absolute;
+    top: -30px;
+    right: -10px;
+    border:none;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+    width: 5%;
+}
+#cl{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border: none;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+    width: 5%;
+}
+.user_profile{
+            position: absolute;
+    padding: 4px;
+    margin-top: 30px;
+    border: 1px solid #d7b70e;
+    display: none;
+    color: #f83055;
+    border-radius: 25px;
+    background-color: #ffffff;
+    z-index: 1000;
+            
+}
+
+#profile_img{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+}
+
+#user_name{
+    margin: 0;
+    padding: 10px;
+    display: inline;
+    color: red;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+label{
+    font-size: 14px;
+}
+
+
+
+
+
+/*===============*/
+.footer-sec{
+    padding-top: 115px;
+    background: linear-gradient(#1b1b1b,#1f1d1d);
+}
+@media(max-width:991px){
+    .footer-sec{
+        padding: 60px 0px;
+    }
+}
+@media(max-width:991px){
+    .footer-sec .footer-widget{
+        margin-bottom:30px;
+    }
+}
+.footer-sec .footer-widget p{
+    color:#fff;
+}
+.footer-sec .footer-widget h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #fff;
+
+}
+@media (max-width: 1024px){
+.footer-sec .footer-widget h4{
+    font-size: 20px;
+}
+}
+@media (max-width: 991px){
+    .footer-sec .footer-widget h4{
+        margin-bottom: 15px;
+
+    }
+}
+.footer-sec .footer-widget ul li{
+    margin-bottom: 10px;
+   
+}
+.footer-sec .footer-widget ul li a{
+    color: #fff;
+    list-style-type: none;
+    
+}
+.footer-sec .footer-widget ul li a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+.footer-sec .footer-widget .form-wrap{
+    margin-top: 25px;
+}
+.footer-sec .footer-widget .form-wrap.info{
+    color:#eb9a03;
+}
+.footer-sec .footer-widget input{
+    height: 40px;
+    border: 1px solid #eee;
+    width: 67%!important;
+    font-weight:lighter;
+    background:#fff;
+    padding-left: 20px;
+    border-radius:25px;
+    color:#fff;
+    margin-right: -25px;
+}
+.footer-sec .footer-widget input:focus{
+    outline:none;
+    box-shadow: none;
+}
+.footer-sec .footer-widget input.placeholder{
+    font-size: 12px;
+    padding-left:10px;
+    color:#888;
+}
+.footer-sec .footer-widget .click-btn{
+    border-radius: 24px;
+    padding:6px 21px 4px 14px;
+    border:0;
+    background: #eb9a03;
+    color:#fff;
+    position: relative;
+    left:0;
+    text-transform: capitalize;
+    z-index: 999;
+}
+.footer-sec .footer-address span{
+    display: block;
+    margin-bottom: 15px;
+    color:#fff;
+}
+.footer-sec .footer-logo{
+    margin-top: 28px;
+    display:inline-block;
+}
+.footer-sec .footer-bottom{
+    border-top: 1px solid #fff;
+    margin-top: 51px;
+    padding: 20px 0;
+}
+@media (max-width:991px){
+    .footer-sec .footer-bottom{
+        margin-top: 20px;
+    }
+}
+.footer-sec .footer-bottom p{
+    color:#fff;
+}
+.footer-sec .footer-bottom p a{
+    color:#eb9a03;
+}
+.footer-sec .footer-bottom .footer-social{
+    text-align:center;
+}
+@media(max-width:991px){
+    .footer-sec .footer-bottom .footer-social{
+        text-align: left;
+        margin-top: 30px !important;
+    }  
+}
+.footer-sec .footer-bottom .footer-social a{
+    margin-left: 3px;
+    width: 32px;
+    color:#fff;
+    display: inline-grid;
+    text-align: center;
+    height: 32px;
+    align-content: center;
+    transition: all .3s linear 0s;
+}
+.footer-sec .footer-bottom .footer-social a:hover{
+    color:#fff;
+}
+.footer-sec .footer-bottom .footer-social a i,
+.footer-sec .footer-bottom .footer-social a span{
+    font-size: 14px;
+}
+@media(max-width: 767px){
+    .footer-sec{
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+    .footer-bottom{
+        margin-top: 35px;
+        padding-top: 40px;
+    }
+    .footer-sec .footer-bottom .footer-social{
+        margin-top: 15px !important;
+    }
+}
+  .footer-sec .footer-bottom p a {
+        color: #eb9a03; }
+    .footer-sec .footer-bottom .footer-social {
+      text-align: center; }
+      @media (max-width: 991px) {
+        .footer-sec .footer-bottom .footer-social {
+          text-align: left;
+          margin-top: 30px !important; } }
+      .footer-sec .footer-bottom .footer-social a {
+        margin-left: 3px;
+        width: 32px;
+        color: #fff;
+        display: inline-grid;
+        text-align: center;
+        height: 32px;
+        align-content: center;
+        transition: all 300ms linear 0s; }
+        .footer-sec .footer-bottom .footer-social a:hover {
+          color: #fff; }
+        .footer-sec .footer-bottom .footer-social a i, .footer-sec .footer-bottom .footer-social a span {
+          font-size: 14px; }
+@media(max-width: 767px){
+  .footer-sec {
+    padding-top: 70px;
+    padding-bottom: 20px; }
+
+  .footer-bottom {
+    margin-top: 35px;
+    padding-top: 40px; }
+
+  .footer-sec .footer-bottom .footer-social {
+    margin-top: 15px !important; }
+   }
+
+   /* main */
+
+.main{
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.mask{
+    overflow: hidden;
+    min-height: 650px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.mask ul {
+    padding: 0;
+    position: relative;
+}
+
+.img__mask{
+    float: right;
+}
+
+#img_2{
+    width: 100px;
+    height: 100px;
+}
+
+.mask__text{
+    float: left;
+    padding-top: 150px;
+    opacity: 1;
+}
+
+.mask__text h1{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px; 
+    font-family: 'Cormorant Garamond', serif;
+    font-size:40px;
+    font-weight:600;
+}
+
+.mask__text p{
+    font-family: 'Poppins', sans-serif;
+    font-size:16px;
+    line-height:1.8;
+    font-weight:400;
+    color:#0e0e0e;
+}
+
+.mask li{
+    list-style: none;
+    position: absolute;
+    top: -700px;
+}
+
+.tooltip{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: fit-content;
+    position: relative;
+    bottom: 80px;
+    background: rgba(0,0,0,0.7);
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.8s opacity;
+    opacity: 0;
+}
+
+.tooltip h1{
+    font-size: 22px;
+}
+
+.img__mask:hover .tooltip{
+   opacity: 1;
+}
+
+#main li.firstanimation {
+    animation: cycle 20s linear infinite;
+ }
+ 
+ #main li.secondanimation {
+    animation: cycletwo 20s linear infinite;
+ }
+ 
+ #main li.thirdanimation {
+    animation: cyclethree 20s linear infinite;
+ }
+ 
+ #main li.fourthanimation {
+    animation: cyclefour 20s linear infinite;
+ }
+
+.mask{
+    overflow: hidden;
+    height: 100%;
+}
+
+#img_0{
+  width: 650px;
+  height: 650px;
+}
+
+
+
+
+@keyframes cycle {
+    0%  { top: 0px; } 
+    5%  { top: 0px; } 
+    20% { top: 0px; opacity:1; z-index:0; } 
+    25% { top: 650px; opacity: 0; z-index: 0; }
+    26% { top: -650px; opacity: 0; z-index: -1; } 
+    95% { top: -650px; opacity: 0; }
+    100%{ top: 0px; opacity: 1; } 
+ }
+ 
+ @keyframes cycletwo {
+    0%  { top: -650px; opacity: 0; } 
+    20% { top: -650px; opacity: 0; }
+    25% { top: 0px; opacity: 1; }
+    30% { top: 0px; opacity: 1; }
+    45% { top: 0px; opacity: 1; z-index: 0; }   
+    50% { top: 650px; opacity: 0; z-index: 0; }
+    51% { top: -650px; opacity: 0; z-index: -1; } 
+    100%{ top: -650px; opacity: 0; z-index: -1; }
+ }
+
+ @keyframes cyclethree {
+    0%  { top: -650px; opacity: 0; }
+    45% { top: -650px; opacity: 0; }
+    50% { top: 0px; opacity: 1; }
+    55% { top: 0px; opacity: 1; }
+    70% { top: 0px; opacity: 1; }
+    75% { top: 650px; opacity: 0; z-index: 0; }
+    76% { top: -650px; opacity: 0; z-index: -1; }
+    100%{ top: -650px; opacity: 0; z-index: -1; }
+ }
+ 
+ @keyframes cyclefour {
+    0%  { top: -650px; opacity: 0; }
+    70% { top: -650px; opacity: 0; }
+    75% { top: 0px; opacity: 1; }
+    80% { top: 0px; opacity: 1; }
+    95% { top: 0px; opacity: 1; z-index: 0; }
+    100%{ top: 650px; opacity: 0; z-index: 0; }
+}
+
+/* search */
+
+.search{
+    padding: 7em 0;
+    position: relative; 
+    padding-bottom: 0 ;
+    padding-top: 0 ;
+}
+
+.search .container .row .headen span,
+.search .container .row .headen h2,
+.search .container .row .headen p
+{
+    text-align: left;
+}
+
+.search__main{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}   
+
+.search-wrap {
+    padding: 0 0 4em 0 ;
+    position: relative; 
+    padding: 1.5rem ;
+}
+
+.align__items{
+    align-items: flex-end ;
+    max-width: 100%; 
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 15px;
+}
+
+.form__group{
+    position: relative;
+    margin-bottom: 0;
+}
+
+.form__group label{
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.form__group .form__field{
+    position: relative;
+    display: block;
+}
+
+.form__group .form__control{
+    padding: 0;
+    padding-left: 20px;
+    display: block;
+    width: 100%;
+    height: 50px ;
+    font-size: 16px;
+    border: 1px solid #e2c0bb ;
+    color: rgba(0, 0, 0, 0.4) ;
+    background: transparent ;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; 
+}
+
+.form__control.btn {
+    margin-top: 27px;
+    text-align: center;
+    padding: 0 10px ;
+    font-size: 16px;
+    background: #e2c0bb;
+    border: none ;
+    color: #fff ; 
+}
+
+
+.select__wrap{
+    position: relative;
+    appearance: none;
+}
+
+
+	</style>
+
+	 <!--Navbar-->
+      <div id="nav">
+          <div class="toggle-btn"onclick="button()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="project.html" style="color: #fff;text-decoration: none;background-color: transparent;">Home</a></li>
+            <li><a href="about.html" style="color: #fff;text-decoration: none;background-color: transparent;">About</a></li>
+            <li><a href="brand.html" style="color: #fff;text-decoration: none;background-color: transparent;">Deals</a></li>
+            <li><a href="ourteam.html" style="color: #fff;text-decoration: none;background-color: transparent;">Blog</a></li>
+            <li><a href="contact.html" style="color: #fff;text-decoration: none;background-color: transparent;">Contact</a></li>
+        </ul>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <!--end of Navbar-->
+      
+       
+       
+      <!--Hero Section-->
+      <section id="hero">
+          <div class="hero-container">
+              <div class="hero-logo">
+                  <img src="https://i.dlpng.com/static/png/1444740-png-svg-shopping-png-512_512_preview.png" width="100" height="100" alt="Burger Palace">
+              </div>
+              <h1> Welcome To Our Internet Store</h1>
+              <h2>We have the best choice for you.</h2>
+              <div class="actions">
+                   <a href="#" class="main-1">Be With Us</a>
+                <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-outline-warning" style="color: white;width: 100px;">Login</button>
+
+<div id="id01" class="modal">
+  <div class="modal-content animate" action="/action_page.php" method="post" style="width: 500px;">
+    <div class="imgcontainer">
+        <img  onclick="document.getElementById('id01').style.display='none'" class="closed" title="Close Modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWru18AcTcX2FXH9DTTrS4tA_96UkuRudHZw&usqp=CAU" width="5%">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyVzGDepWACTLb5zMBBtlKwtyg1YD15RMfvw&usqp=CAU" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="pass" placeholder="Enter Password" required>
+        
+      <button type="submit" class="btn btn-outline-success" style="font-size: 14px;" onclick="login(username.value)">Log in</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><button onclick="document.getElementById('id1').style.display='block'" class="btn btn-primary" style="color: white;width: 100px;font-size: 14px;">Sign In</button></span>
+
+      
+            <div id="id1" class="modal">
+  <div class="modal-container animate" action="/action_page.php">
+     <div class="imgcontainer">
+        <img  onclick="document.getElementById('id01').style.display='none'" id="cl" title="Close Modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWru18AcTcX2FXH9DTTrS4tA_96UkuRudHZw&usqp=CAU" width="5%">
+    </div>
+    <div class="container">
+      <h3 id="h3_1">Sign <b>Up</b></h3>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+      </label>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="btn btn-primary" style="font-size: 14px;">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+
+    <div id="Google">          
+                    <div id="face1">
+                        <img  class="face" src="https://img1.freepng.ru/20180319/cre/kisspng-facebook-computer-icons-social-media-social-networ-facebook-f-logo-white-background-5ab03689995582.1086124515214977376281.jpg" width="50px;" height="50px">
+                        <div ></div>
+                    </div>
+                    <div id="face1">
+                        <img class="goog" src="https://gazetacrimea.ru/public/upload/images/photo.jpg" alt="" width="50px" height="50px">
+                    </div>
+                    <div  id="face1">
+                        <img src="https://logosklad.ru/photo/logos/365/1485500647.jpg" width="56px" height="56px;">
+                    </div>
+                </div>
+
+  </div>
+</div>
+                </div> 
+
+
+
+              </div>
+          </div>
+      </section>
+      <!---End of Hero Section-->
+
+
+<!-- Hero ends -->
+
+
+
+    <div class="main" id="main">
+
+          
+            <div class="container">
+              <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYwa_t_GuyfkVzuQTrJ-LAf3tgDvC0He_uaFtRTuazmMcSvCLuLhQnQcA3KYRVbinzWRxttYRqGqkckMDKPMdeqoh9gc0x_g&usqp=CAU&ec=45732304" id="img_2" alt=""></div>
+                <div class="row">           
+                    <div class="mask">
+                        <ul>
+                            <li id="first" class="firstanimation">
+                                <div class="img__mask">
+                                    <img id="img_0" src="https://images.samsung.com/kz_ru/business/smartphones/galaxy-s20/images/00_kv_720.jpg" alt="" width="600" height="650"/>
+                                    <div class="tooltip"><h1>Samsung, Galaxy S20 Ultra</h1>
+                                    </div> 
+                                </div>
+                                <div class="mask__text">
+                                    <h1>Смартфон Samsung</h1>
+                                    <h1>Galaxy S20</h1>
+                                    <h1>Ultra 128Gb Black</h1> 
+                                    <h1>Sale!</h1>
+                                    <h1>before</h1>
+                                    <p>Choosing us, you choose the best internet service</p>
+
+                                </div>
+                            </li>
+                        
+                            <li id="second" class="secondanimation">
+                                <div class="img__mask">
+                                    <img id="img_0" src="https://images-na.ssl-images-amazon.com/images/I/51l%2B2vBwvOL._AC_SL1000_.jpg" alt=""  width="600" height="650" />
+                                    <div class="tooltip">
+                                      <h1>Dron, DJI Mavic Air 2 Fly</h1>
+                                    </div> 
+                                </div>
+                             <div class="mask__text">
+                                <h1>DJI Mavic Air 2 Fly </h1>
+                                <h1>More Combo</h1>
+                <h1>Silver</h1>
+                                <h1>Sale!</h1>
+                                <h1>before</h1>
+                                <p>Choosing us, you choose the best internet service</p>
+                            </div>
+                            </li>
+
+                            <li id="third" class="thirdanimation">
+                                <div class="img__mask">
+                                  <img id="img_0" src="PS5.png" alt=""  width="600" height="650" />
+                                  <div class="tooltip"><h1>PlayStation 5 (2020)</h1></div> 
+                                </div>
+                                 <div class="mask__text">
+                                  <h1>PlayStation 5</h1>
+                                    <h1>Play Has No Limits™</h1>
+                                    <h1>Black Edition 2020</h1>
+                                    <h1>New Sale!</h1> 
+                                    <h1>before</h1>
+                                    <p>Choosing us, you choose the best internet service</p>
+
+                                </div>
+                            </li>
+                        
+                            <li id="fourth" class="fourthanimation">
+                                <div class="img__mask">
+                                 <img id="img_0" src="https://mobiltelefon.ru/photo/october20/13/iphone_12_pro_anons_1.jpg" alt="Howling"  width="600" height="650" />
+                                 <div class="tooltip"><h1>iPhone 12 Pro Max 128GB Blue</h1></div> 
+                                </div>
+                             <div class="mask__text">
+                                <h1>Смартфон Apple</h1>
+                                <h1>iPhone 12 Pro Max</h1>
+                                <h1>128GB Gold</h1>
+                                <h1>Sale!</h1> 
+                                <h1>before</h1>
+                                <p>Choosing us, you choose the best internet service</p>
+
+                             </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+         <!--Search-->
+    <section class="search" id="search">
+      <div class="container">
+        <div class="row">
+                <div class="headen">
+                  <span class="subheading">IStore</span>
+                  <h2>What do you want to get?</h2>
+                  <p>Far far away, behind the word cities, far from the countries Vokalia and Consonantia</p>
+                </div>
+            </div>
+        <div class="row">
+          <div class="search__main">
+            <div class="search-wrap">
+              <form action="#" class="search-property-1">
+                        <div class="row">
+                          <div class="align__items">
+                            <div class="form__group">
+                              <label for="#">Destination</label>
+                              <div class="form__field">
+                                
+                                <input type="text" class="form__control" placeholder="Search place">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="align__items">
+                            <div class="form__group">
+                              <label for="#">Check-in date</label>
+                              <div class="form__field">
+                                <input type="text" class="form__control" placeholder="Check In Date">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="align__items">
+                            <div class="form__group">
+                              <label for="#">All Cathegories</label>
+                              <div class="form__field">
+                                <div class="select__wrap">
+                                        
+                                                     <select name="" id="" class="form__control">
+                                    <option value=""> Gajets</option>
+                                    <option value=""> Mechanics</option>
+                                    <option value=""> TV, audio, video</option>
+                                    <option value=""> All for Sport</option>
+                                    <option value=""> Camera</option>
+                                    <option value=""> Computer and Noutbookes</option>
+                                    <option value=""> All for gamers</option>
+                                    <option value=""> All for home</option>
+                                    <option value=""> Home appliances</option>
+                                    <option value=""> Kitchen appliances</option>
+                                    <option value=""> Childrens products</option>
+                                                     </select>
+                                                 </div>
+                                
+                               
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="align__items">
+                            <div class="form__group">
+                              <label for="#">Price Limit</label>
+                                  <div class="form__field">
+                                        <div class="select__wrap">
+                                        
+                                                     <select name="" id="" class="form__control">
+                                    <option value=""> 100,000 ₸</option>
+                                    <option value=""> 200,000 ₸</option>
+                                    <option value=""> 300,000 ₸</option>
+                                    <option value=""> 400,000 ₸</option>
+                                    <option value=""> 500,000 ₸</option>
+                                    <option value=""> 600,000 ₸</option>
+                                    <option value=""> 700,000 ₸</option>
+                                    <option value=""> 800,000 ₸</option>
+                                    <option value=""> 900,000 ₸</option>
+                                    <option value=""> 1,000,000 ₸</option>
+                                    <option value=""> 2,000,000 ₸</option>
+                                                     </select>
+                                                 </div>
+                                        </div>
+                                  </div>
+                          </div>
+                          <div class="align__items">
+                            <div class="form__group">
+                              <div class="form__field">
+                                        <input type="submit" value="Search" class="form__control btn">
+                                    </div>
+                                  </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </section>   
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer-sec mt-5 mx-auto">
+    <div class="container">
+        <div class="row">
+            <div class="column footer-widget">
+                <h4>About Us</h4>
+                <p>Out motto - <br>" The client is always right! ".</p>
+                <div class="footer-logo">
+                    <h3 class="text-white">Internet Store</h3>
+                </div>
+            </div>
+            <div class="column footer-widget">
+                <h4>Contact Info</h4>
+                <div class="footer-address">
+                    <p>Your Address Goes Here</p>
+                    <span>Phone: +7-(7252)-49-31-60</span>
+                    <span>email: ibusiness.group@gmail.com</span>
+                </div>
+            </div>
+            <div class="column footer-widget">
+                <h4> Important Links</h4>
+                <ul>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">Planet Store</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Discounts</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+
+            </div>
+           <div class="column footer-widget">
+                <h4> Newsletter</h4>
+                <p>Write down your own email adress and we will sent you a message.</p>
+                <div class="form-wrap">
+                    <form>
+                        <div class="input-group">
+                            <input type="email"class="form-control" name="Email"placeholder="Email Address">
+                            <div class="input-group-append">
+                                <button class="btn click-btn" type="submit">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer-bottom row align-items-center text-center
+            text-lg-left no-gutters">
+            <p class="footer-text column">
+                Copyright #<script>document.write(new Date().getFullYear());</script>
+                All rights Reserved IBusiness Group 
+                <i class="fas fa-heart" aria-hidden="true"></i>
+                Powered by AAB 
+            </p>
+            <div class="column text-center text-lg-right footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        
+        
+        </div>
+
+        </div>
+    </div>
+</footer>
+
+
+    
+     <script>
+  function button(){
+    document.getElementById("nav").classList.toggle("active");
+}
+
+
+
+  
+    </script>
+
+</body>
+</html>

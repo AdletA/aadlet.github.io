@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"href="project.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnMj8Xc5_jA0tqVHCoFHCk-2sHt4imItA&callback=initMap"></script>
+
+
+  </head>
+  <body>
+      <!--Navbar-->
+      <div id="nav">
+          <div class="toggle-btn"onclick="button()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="project.html" style="color: #fff;text-decoration: none;background-color: transparent;">Home</a></li>
+            <li><a href="about.html" style="color: #fff;text-decoration: none;background-color: transparent;">About</a></li>
+            <li><a href="deals.html" style="color: #fff;text-decoration: none;background-color: transparent;">Deals</a></li>
+            <li><a href="blog.html" style="color: #fff;text-decoration: none;background-color: transparent;">Blog</a></li>
+            <li><a href="contact.html" style="color: #fff;text-decoration: none;background-color: transparent;">Contact</a></li>
+        </ul>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <!--end of Navbar-->
+      
+       
+       
+      <!--Hero Section-->
+      <section id="hero">
+          <div class="hero-container">
+              <div class="hero-logo">
+                  <img src="https://i.dlpng.com/static/png/1444740-png-svg-shopping-png-512_512_preview.png" width="100" height="100" alt="Burger Palace">
+              </div>
+              <h1> Welcome To Our Internet Store</h1>
+              <h2>We have the best choice for you.</h2>
+              <div class="actions">
+                   <a href="#" class="main-1">Be With Us</a>
+                <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-outline-warning" style="color: white;width: 100px;">Login</button>
+
+<div id="id01" class="modal">
+  <div class="modal-content animate" action="/action_page.php" method="post" style="width: 500px;">
+    <div class="imgcontainer">
+        <img  onclick="document.getElementById('id01').style.display='none'" class="closed" title="Close Modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWru18AcTcX2FXH9DTTrS4tA_96UkuRudHZw&usqp=CAU" width="5%">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyVzGDepWACTLb5zMBBtlKwtyg1YD15RMfvw&usqp=CAU" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="pass" placeholder="Enter Password" required>
+        
+      <button type="submit" class="btn btn-outline-success" style="font-size: 14px;" onclick="login(username.value)">Log in</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><button onclick="document.getElementById('id1').style.display='block'" class="btn btn-primary" style="color: white;width: 100px;font-size: 14px;">Sign In</button></span>
+
+      
+            <div id="id1" class="modal">
+  <div class="modal-container animate" action="/action_page.php">
+     <div class="imgcontainer">
+        <img  onclick="document.getElementById('id01').style.display='none'" id="cl" title="Close Modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWru18AcTcX2FXH9DTTrS4tA_96UkuRudHZw&usqp=CAU" width="5%">
+    </div>
+    <div class="container">
+      <h3 id="h3_1">Sign <b>Up</b></h3>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+      </label>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="btn btn-primary" style="font-size: 14px;">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+
+    <div id="Google">          
+                    <div id="face1">
+                        <img  class="face" src="https://img1.freepng.ru/20180319/cre/kisspng-facebook-computer-icons-social-media-social-networ-facebook-f-logo-white-background-5ab03689995582.1086124515214977376281.jpg" width="50px;" height="50px">
+                        <div ></div>
+                    </div>
+                    <div id="face1">
+                        <img class="goog" src="https://gazetacrimea.ru/public/upload/images/photo.jpg" alt="" width="50px" height="50px">
+                    </div>
+                    <div  id="face1">
+                        <img src="https://logosklad.ru/photo/logos/365/1485500647.jpg" width="56px" height="56px;">
+                    </div>
+                </div>
+
+  </div>
+</div>
+                </div> 
+
+
+
+              </div>
+          </div>
+      </section>
+      <!---End of Hero Section-->
+<!--About us -->
+<section>
+<div class="about mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-header">
+                    <h2 class="text-uppercase">Why We?</h2>
+                </div>
+                <div class="about-text">
+                    <div class="about-img">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="https://trello-gid.ru/wp-content/uploads/2018/10/komanda-trello.png"alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7aawgVGT5Swjs7oE4AgHjSsvq_RMNAezBSSV3hi0NsOlX4V9ghKGg4yuOe7JSCZj8fvdpLQiQlsBkPAB5fouppbbn6z6QE14_g&usqp=CAU&ec=45732304"alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://dnepr.info/wp-content/uploads/2019/07/nasha-komanda.jpg"alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://restoranoff.ru/upload/iblock/54b/osnova-effektivnoy-komandy_main.jpg"alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                       Our company is appreciated by the very friendly teamwork and, moreover, the neat work of the employees, thank you for your attention!
+                    </p>
+                    <a class="btn abt-btn"href="">Book a Table</a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="about-detail">
+                            <i class="fas fa-utensils"></i>
+                            <h3>Professional workers</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore in dolorem illum doloribus, quibusdam asperiores.</p>
+                        </div>
+                    </div>
+                    <!----->
+                    <div class="col-sm-6">
+                        <div class="about-detail">
+                            <i class="fas fa-pepper-hot"></i>
+                            <h3>Products</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore in dolorem illum doloribus, quibusdam asperiores.</p>
+                        </div>
+                    </div>
+                    <!----->
+                    <div class="col-sm-6">
+                        <div class="about-detail">
+                            <i class="fas fa-stamp"></i>
+                            <h3>Quality Products</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore in dolorem illum doloribus, quibusdam asperiores.</p>
+                        </div>
+                    </div>
+                    <!----->
+                    <div class="col-sm-6">
+                        <div class="about-detail">
+                            <i class="fas fa-cloud-meatball"></i>
+                            <h3>Fresh news</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore in dolorem illum doloribus, quibusdam asperiores.</p>
+                        </div>
+                    </div>
+                    <!----->
+                    <div class="col-sm-6">
+                        <div class="about-detail">
+                            <i class="fas fa-truck"></i>
+                            <h3>On Time Delivery</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore in dolorem illum doloribus, quibusdam asperiores.</p>
+                        </div>
+                    </div>
+                    <!----->
+                    <div class="col-sm-6">
+                        <div class="about-detail">
+                            <i class="fas fa-fish"></i>
+                            <h3>Working hours</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore in dolorem illum doloribus, quibusdam asperiores.</p>
+                        </div>
+                    </div>
+                    <!----->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!---End of About us-->
+<!--Deals of the Day -->
+<section>
+    <div class="section mt-5">
+        <div class="container-fluid">
+            <div class="section-title text-center">
+                <h3> Deals Of The Day</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://www.lenovo.com/medias/lenovo-laptop-v310-15-hero.png?context=bWFzdGVyfGltYWdlc3w1ODA5N3xpbWFnZS9wbmd8aW1hZ2VzL2g5My9oYzIvOTM4NzQ3NDUxODA0Ni5wbmd8NjM0NDJkZmJhMjk2MTQxMjhhMWMyNmFjZTI0MzY3YmVkNDNhNTcxN2NkMTJjNDA4MmYwYWJiZjIyY2JjYjBhNA"class="img-fluid"alt="">
+                        </div>
+                        <h2>Lenovo NoteBook</h2>
+                        <a class="deal-btn"href="">$500.00</a>
+                    </div>
+                </div>
+                <!----->
+               <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://purepng.com/public/uploads/large/purepng.com-samsung-galaxysmartphoneandroidgooglephoneapplication-2115193404121mjmr.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>Samsung Smartphone</h2>
+                        <a class="deal-btn"href="">$275.00</a>
+                    </div>
+                </div>
+                <!----->
+                <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://lmt.mstatic.lv/devices/images/450x450/Apple_iPhone_11_Pro_Max_256GB40128.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>Apple Iphone</h2>
+                        <a class="deal-btn"href="">$280.00</a>
+                    </div>
+                </div>
+                <!----->
+                 <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://pngimg.com/uploads/macbook/macbook_PNG17.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>MacBook</h2>
+                        <a class="deal-btn"href="">$500.00</a>
+                    </div>
+                </div>
+                
+                <!----->
+                <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://img.global.news.samsung.com/uk/wp-content/uploads/2020/08/Galaxy-Watch3-Mystic-Bronze.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>Samsung Watches</h2>
+                        <a class="deal-btn"href="">$160.00</a>
+                    </div>
+                </div>
+                <!----->
+                <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://fastexpo.net/wp-content/uploads/2019/10/Apple-Watch-Apple-Watch-Iwatch-PNG-Image.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>Apple Watches</h2>
+                        <a class="deal-btn"href="">$180.00</a>
+                    </div>
+                </div>
+                <!----->
+                <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="head.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>Headphones</h2>
+                        <a class="deal-btn"href="">$90.00</a>
+                    </div>
+                </div>
+                <!----->
+                <div class="col-md-3">
+                    <div class="deal-box">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Xbox-360-Consoles-Infobox.png"class="img-fluid"alt="">
+                        </div>
+                        <h2>Xbox</h2>
+                        <a class="deal-btn"href="">$220.00</a>
+                    </div>
+                </div>
+                <!----->
+            </div>
+        </div>
+    </div>
+</section>
+<!---End of the Deals-->
+<!---slider Section-->
+<section class="mt-3">
+    <h2 class="text-center">
+        Just a Slide Show
+        
+    </h2>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <div class="number">1/3</div>
+            <img src="https://s.hi-news.ru/wp-content/uploads/2019/12/xperira5-750x422.jpeg" style="width:100%">
+            <div class="text">Phones</div>
+        </div> 
+        <div class="slides fade">
+            <div class="number">2/3</div>
+            <img src="https://www.photoschool.kiev.ua/images/easyblog_articles/24/best-compact-cameras-2018.ngsversion.1.jpg" style="width:100%">
+            <div class="text">Camera</div>
+        </div> 
+        <div class="slides fade">
+            <div class="number">3/3</div>
+            <img src="https://theroco.com/assets/2019/06/xiaomi-mi-tv-4s-presented-in-russia-1.jpg" style="width:100%">
+            <div class="text">TV</div>
+        </div>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+<!----end of the slider-->
+<!--Blog Section-->
+<section class="mt-5">
+    <div class="container">
+        <div class="section-intro text-center pb-80px">
+            <h2>Our buildings</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="card card-main">
+                    <div class="card-main-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP83GU7_BMdoxGZQH4yrDyyV_sCJxAEdEfnNeXGS5XTKVCC3DZBFfsaFL01lu_2oPYrEkGlcvDNv4XASKbKDNvaco-yyK2ejfxnw&usqp=CAU&ec=45732304alt="class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">We are in Spain(Barcelona).</a>
+                        </h4>
+                        <ul class="card-info">
+                            <li><a href="#">
+                                <span class="card-icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                    7 Aug, 2015
+                                </span>
+                            </a></li>
+                            <li><a href="#"><span class="card-icon">
+                                <i class="fas fa-comments"></i>
+                                08 comments
+                            </span></a></li>
+
+                        </ul>
+                        <p> We make the world a better place.  Make the right choice with us</p>
+                        <a href="#"class="card-link">Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!----->
+            <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="card card-main">
+                    <div class="card-main-img">
+                        <img src="https://iqplanet.ru/upload/iblock/2d6/2d6ae71725acbcff88f56ef3495d35be.jpg"alt=""class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">We are in England(London).</a>
+                        </h4>
+                        <ul class="card-info">
+                            <li><a href="#">
+                                <span class="card-icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                     25 May, 2012
+                                </span>
+                            </a></li>
+                            <li><a href="#"><span class="card-icon">
+                                <i class="fas fa-comments"></i>
+                                14 comments
+                            </span></a></li>
+
+                        </ul>
+                        <p> We make the world a better place. Make the right choice with us</p>
+                        <a href="#"class="card-link">Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!----->
+            <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                <div class="card card-main">
+                    <div class="card-main-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREQ24i9DIo4Ko_zhDRVv8Dwz3FD1X1H41-2rNjn1D9fuf-CjAUcxu35jVLjn8znrPG49UcTY9ibxvaVf-XiTmw6CkQeQa5tIqh_w&usqp=CAU&ec=45732304"alt=""class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">We are on Switzerland(Bern).</a>
+                        </h4>
+                        <ul class="card-info">
+                            <li><a href="#">
+                                <span class="card-icon">
+                                    <i class="far fa-calendar-alt"></i>
+                                    11 Nov, 2018
+                                </span>
+                            </a></li>
+                            <li><a href="#"><span class="card-icon">
+                                <i class="fas fa-comments"></i>
+                                04 comments
+                            </span></a></li>
+
+                        </ul>
+                        <p> We make the world a better place.  Make the right choice with us</p>
+                        <a href="#"class="card-link">Read More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!----->
+        </div>
+    </div>
+</section>
+<!--End of Blog Section-->
+
+
+
+<!-- Map -->
+        <h1 id="mapH">You can find us Here!
+            <br> There are free deliveries in the red circles area
+            <br>Be with us and we will delight you!
+        </h1>       
+            <div class="maps">
+                <div id="map"></div>
+            </div>
+
+
+
+
+<!-- Footer -->
+
+<footer class="footer-sec mt-5 mx-auto">
+    <div class="container">
+        <div class="row">
+            <div class="column footer-widget">
+                <h4>About Us</h4>
+                <p>Out motto - <br>" The client is always right! ".</p>
+                <div class="footer-logo">
+                    <h3 class="text-white">Internet Store</h3>
+                </div>
+            </div>
+            <div class="column footer-widget">
+                <h4>Contact Info</h4>
+                <div class="footer-address">
+                    <p>Your Address Goes Here</p>
+                    <span>Phone: +7-(7252)-49-31-60</span>
+                    <span>email: ibusiness.group@gmail.com</span>
+                </div>
+            </div>
+            <div class="column footer-widget">
+                <h4> Important Links</h4>
+                <ul>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">Planet Store</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Discounts</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+
+            </div>
+           <div class="column footer-widget">
+                <h4> Newsletter</h4>
+                <p>Write down your own email adress and we will sent you a message.</p>
+                <div class="form-wrap">
+                    <form>
+                        <div class="input-group">
+                            <input type="email"class="form-control" name="Email"placeholder="Email Address">
+                            <div class="input-group-append">
+                                <button class="btn click-btn" type="submit">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer-bottom row align-items-center text-center
+            text-lg-left no-gutters">
+            <p class="footer-text column">
+                Copyright #<script>document.write(new Date().getFullYear());</script>
+                All rights Reserved IBusiness Group 
+                <i class="fas fa-heart" aria-hidden="true"></i>
+                Powered by AAB 
+            </p>
+            <div class="column text-center text-lg-right footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        
+        
+        </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="project.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

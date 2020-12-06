@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Deals</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+</head>
+<body>  
+  <style>
+body{
+    font-family: 'Lato', sans-serif;
+}
+/*===Navbar===*/
+#nav{
+    position:fixed;
+    width: 250px;
+    height: 100%;
+    background: #000;
+    left: -250px;
+    transition: all .5s linear;
+}
+#nav.active{
+    left:0;
+}
+#nav ul li{
+    list-style-type: none;
+    color:#fff;
+    padding: 10px 0px;
+    text-align: center;
+    border-bottom: 1px solid #cba63f;
+}
+
+#nav .toggle-btn{
+    position: absolute;
+    left: 260px;
+    top: 20px;
+}
+#nav .toggle-btn span{
+    display: block;
+    width: 45px;
+    height: 10px;
+    background: orange;
+    margin: 3px 0px;
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 10px;
+}
+i{
+    color: #fff;
+    margin: 12.5px;
+    cursor: pointer;
+}
+    /*================*/
+
+
+#hero{
+    display:table;
+    width: 100%;
+    height: 100vh;
+    background: url(https://c.pxhere.com/photos/4e/3e/apple_Black_CC0_Photos_Cellphone_Desk_Device_Free_Images_Free_Photos-1616215.jpg!d)/*(banner.png)*/ top center;
+    background-size: cover;
+}
+@media (min-width: 1024px){
+    #hero{
+        background-attachment: fixed;
+    }
+}
+#hero .hero-logo{
+    margin:20px;
+}
+#hero .hero-logo img{
+    max-width: 25%;
+}
+#hero .hero-container{
+    background: rgba(18,19,19, 0.4);
+    display: table-cell;
+    margin:0;
+    padding:0;
+    text-align: center;
+    vertical-align: middle;
+}
+#hero h1{
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 75px;
+}
+@media (max-width: 768px){
+    #hero h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+#hero h2{
+    color:#fff;
+    margin-bottom: 50px;
+}
+@media (max-width: 768px){
+    #hero h2{
+        font-size:24px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+    
+}
+#hero .actions a{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+} 
+#hero .main-1{
+    background: #eb9a03;
+    border: 2px solid #eb9a03;
+    color:#000;
+    font-weight: bold;
+}
+#hero .main-1:hover{
+    background: none;
+    border: 2px solid #fff;
+    color:#fff;
+    text-decoration: none;
+}
+#hero .main-2{
+    border: 2px solid #fff;
+    color:#fff;
+}
+#hero .main-2:hover{
+    background: #eb9a03;
+    border: 2px solid #eb9a03;
+    text-decoration: none;
+}
+b{
+    color:#f44336;
+}
+
+#h3_1{
+    color: black;
+}
+
+/* Log In*/
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  font-size: 14px;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  padding-top: 16px;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.modal-container{
+    margin: 5% auto 15% auto;
+    width: 510px;
+    background-color: #fff;
+}
+
+#Google{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px auto;
+}
+#face1{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+.closed{
+    position: absolute;
+    top: -30px;
+    right: -10px;
+    border:none;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+    width: 5%;
+}
+#cl{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border: none;
+    border-radius: 50%;
+    border: 1px solid grey;
+    cursor: pointer;
+    width: 5%;
+}
+.user_profile{
+            position: absolute;
+    padding: 4px;
+    margin-top: 30px;
+    border: 1px solid #d7b70e;
+    display: none;
+    color: #f83055;
+    border-radius: 25px;
+    background-color: #ffffff;
+    z-index: 1000;
+            
+}
+
+#profile_img{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+}
+
+#user_name{
+    margin: 0;
+    padding: 10px;
+    display: inline;
+    color: red;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+label{
+    font-size: 14px;
+}
+
+
+
+
+
+/*===============*/
+.footer-sec{
+    padding-top: 115px;
+    background: linear-gradient(#1b1b1b,#1f1d1d);
+}
+@media(max-width:991px){
+    .footer-sec{
+        padding: 60px 0px;
+    }
+}
+@media(max-width:991px){
+    .footer-sec .footer-widget{
+        margin-bottom:30px;
+    }
+}
+.footer-sec .footer-widget p{
+    color:#fff;
+}
+.footer-sec .footer-widget h4{
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #fff;
+
+}
+@media (max-width: 1024px){
+.footer-sec .footer-widget h4{
+    font-size: 20px;
+}
+}
+@media (max-width: 991px){
+    .footer-sec .footer-widget h4{
+        margin-bottom: 15px;
+
+    }
+}
+.footer-sec .footer-widget ul li{
+    margin-bottom: 10px;
+   
+}
+.footer-sec .footer-widget ul li a{
+    color: #fff;
+    list-style-type: none;
+    
+}
+.footer-sec .footer-widget ul li a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+.footer-sec .footer-widget .form-wrap{
+    margin-top: 25px;
+}
+.footer-sec .footer-widget .form-wrap.info{
+    color:#eb9a03;
+}
+.footer-sec .footer-widget input{
+    height: 40px;
+    border: 1px solid #eee;
+    width: 67%!important;
+    font-weight:lighter;
+    background:#fff;
+    padding-left: 20px;
+    border-radius:25px;
+    color:#fff;
+    margin-right: -25px;
+}
+.footer-sec .footer-widget input:focus{
+    outline:none;
+    box-shadow: none;
+}
+.footer-sec .footer-widget input.placeholder{
+    font-size: 12px;
+    padding-left:10px;
+    color:#888;
+}
+.footer-sec .footer-widget .click-btn{
+    border-radius: 24px;
+    padding:6px 21px 4px 14px;
+    border:0;
+    background: #eb9a03;
+    color:#fff;
+    position: relative;
+    left:0;
+    text-transform: capitalize;
+    z-index: 999;
+}
+.footer-sec .footer-address span{
+    display: block;
+    margin-bottom: 15px;
+    color:#fff;
+}
+.footer-sec .footer-logo{
+    margin-top: 28px;
+    display:inline-block;
+}
+.footer-sec .footer-bottom{
+    border-top: 1px solid #fff;
+    margin-top: 51px;
+    padding: 20px 0;
+}
+@media (max-width:991px){
+    .footer-sec .footer-bottom{
+        margin-top: 20px;
+    }
+}
+.footer-sec .footer-bottom p{
+    color:#fff;
+}
+.footer-sec .footer-bottom p a{
+    color:#eb9a03;
+}
+.footer-sec .footer-bottom .footer-social{
+    text-align:center;
+}
+@media(max-width:991px){
+    .footer-sec .footer-bottom .footer-social{
+        text-align: left;
+        margin-top: 30px !important;
+    }  
+}
+.footer-sec .footer-bottom .footer-social a{
+    margin-left: 3px;
+    width: 32px;
+    color:#fff;
+    display: inline-grid;
+    text-align: center;
+    height: 32px;
+    align-content: center;
+    transition: all .3s linear 0s;
+}
+.footer-sec .footer-bottom .footer-social a:hover{
+    color:#fff;
+}
+.footer-sec .footer-bottom .footer-social a i,
+.footer-sec .footer-bottom .footer-social a span{
+    font-size: 14px;
+}
+@media(max-width: 767px){
+    .footer-sec{
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+    .footer-bottom{
+        margin-top: 35px;
+        padding-top: 40px;
+    }
+    .footer-sec .footer-bottom .footer-social{
+        margin-top: 15px !important;
+    }
+}
+  .footer-sec .footer-bottom p a {
+        color: #eb9a03; }
+    .footer-sec .footer-bottom .footer-social {
+      text-align: center; }
+      @media (max-width: 991px) {
+        .footer-sec .footer-bottom .footer-social {
+          text-align: left;
+          margin-top: 30px !important; } }
+      .footer-sec .footer-bottom .footer-social a {
+        margin-left: 3px;
+        width: 32px;
+        color: #fff;
+        display: inline-grid;
+        text-align: center;
+        height: 32px;
+        align-content: center;
+        transition: all 300ms linear 0s; }
+        .footer-sec .footer-bottom .footer-social a:hover {
+          color: #fff; }
+        .footer-sec .footer-bottom .footer-social a i, .footer-sec .footer-bottom .footer-social a span {
+          font-size: 14px; }
+@media(max-width: 767px){
+  .footer-sec {
+    padding-top: 70px;
+    padding-bottom: 20px; }
+
+  .footer-bottom {
+    margin-top: 35px;
+    padding-top: 40px; }
+
+  .footer-sec .footer-bottom .footer-social {
+    margin-top: 15px !important; }
+   }
+/*Deals*/
+.portfolio-items-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+  position: relative;
+}
+
+.portfolio-img-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%;
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  color: transparent;
+}
+
+.image-blur {
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.img-text-wrapper:hover .subtitle {
+  color: lightseagreen;
+  font-weight: 600;
+}
+
+.logo-wrapper img {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.two-column-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+}
+
+.profile-content-wrapper {
+  padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+  color: lightseagreen;
+}
+
+</style>
+
+	 <!--Navbar-->
+      <div id="nav">
+          <div class="toggle-btn"onclick="button()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="project.html" style="color: #fff;text-decoration: none;background-color: transparent;">Home</a></li>
+            <li><a href="about.html" style="color: #fff;text-decoration: none;background-color: transparent;">About</a></li>
+            <li><a href="deals.html" style="color: #fff;text-decoration: none;background-color: transparent;">Deals</a></li>
+            <li><a href="blog.html" style="color: #fff;text-decoration: none;background-color: transparent;">Blog</a></li>
+            <li><a href="contact.html" style="color: #fff;text-decoration: none;background-color: transparent;">Contact</a></li>
+        </ul>
+        <div class="social">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <!--end of Navbar-->
+      
+       
+       
+      <!--Hero Section-->
+      <section id="hero">
+          <div class="hero-container">
+              <div class="hero-logo">
+                  <img src="https://i.dlpng.com/static/png/1444740-png-svg-shopping-png-512_512_preview.png" width="100" height="100" alt="Burger Palace">
+              </div>
+              <h1> Welcome To Our Internet Store</h1>
+              <h2>We have the best choice for you.</h2>
+              <div class="actions">
+                   <a href="#" class="main-1">Be With Us</a>
+                <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-outline-warning" style="color: white;width: 100px;">Login</button>
+
+<div id="id01" class="modal">
+  <div class="modal-content animate" action="/action_page.php" method="post" style="width: 500px;">
+    <div class="imgcontainer">
+        <img  onclick="document.getElementById('id01').style.display='none'" class="closed" title="Close Modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWru18AcTcX2FXH9DTTrS4tA_96UkuRudHZw&usqp=CAU" width="5%">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyVzGDepWACTLb5zMBBtlKwtyg1YD15RMfvw&usqp=CAU" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="pass" placeholder="Enter Password" required>
+        
+      <button type="submit" class="btn btn-outline-success" style="font-size: 14px;" onclick="login(username.value)">Log in</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"><button onclick="document.getElementById('id1').style.display='block'" class="btn btn-primary" style="color: white;width: 100px;font-size: 14px;">Sign In</button></span>
+
+      
+            <div id="id1" class="modal">
+  <div class="modal-container animate" action="/action_page.php">
+     <div class="imgcontainer">
+        <img  onclick="document.getElementById('id01').style.display='none'" id="cl" title="Close Modal" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWru18AcTcX2FXH9DTTrS4tA_96UkuRudHZw&usqp=CAU" width="5%">
+    </div>
+    <div class="container">
+      <h3 id="h3_1">Sign <b>Up</b></h3>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">Remember me
+      </label>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="btn btn-primary" style="font-size: 14px;">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+
+    <div id="Google">          
+                    <div id="face1">
+                        <img  class="face" src="https://img1.freepng.ru/20180319/cre/kisspng-facebook-computer-icons-social-media-social-networ-facebook-f-logo-white-background-5ab03689995582.1086124515214977376281.jpg" width="50px;" height="50px">
+                        <div ></div>
+                    </div>
+                    <div id="face1">
+                        <img class="goog" src="https://gazetacrimea.ru/public/upload/images/photo.jpg" alt="" width="50px" height="50px">
+                    </div>
+                    <div  id="face1">
+                        <img src="https://logosklad.ru/photo/logos/365/1485500647.jpg" width="56px" height="56px;">
+                    </div>
+                </div>
+
+  </div>
+</div>
+                </div> 
+
+
+
+              </div>
+          </div>
+      </section>
+      <!---End of Hero Section-->
+
+
+<div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio1.jpg)"></div>
+
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/quip.png" alt="">
+            </div>
+
+            <div class="subtitle">I built the Quip Ecommerce platform, named a Top 25 Invention by Time Magazine in 2016.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio2.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/devcamp.png" alt="">
+            </div>
+
+            <div class="subtitle">Coding bootcamp and learning management system.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio3.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/eventbrite.png" alt="">
+            </div>
+
+            <div class="subtitle">Eventbrite is the leading event management platform on the web with millions of individuals utilizing their applications
+              to find, register or, and management events in numerous industries.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio4.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/shop-hacker.png" alt="">
+            </div>
+
+            <div class="subtitle">Shop Hacker allows you to easily import digital products such as elearning courses, software, and games directly
+              into your ecommerce store.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio5.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/crondose.png" alt="">
+            </div>
+
+            <div class="subtitle">Online tutorials and productivity tips.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio6.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/dailysmarty.png" alt="">
+            </div>
+
+            <div class="subtitle">Keep track of what you learn every day.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio7.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/dashtrack.png" alt="">
+            </div>
+
+            <div class="subtitle">What you track improves. DashTrack is a journal that makes it easy to track your daily tasks and make the most
+              of your time each day.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio8.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/devtrunk.png" alt="">
+            </div>
+
+            <div class="subtitle">Online shop for developer happiness.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio9.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/edutechional.png" alt="">
+            </div>
+
+            <div class="subtitle">Online technology tutorials.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio10.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/ministry-safe.png" alt="">
+            </div>
+
+            <div class="subtitle">A complete child safety system for organizations.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio11.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/open-devos.png" alt="">
+            </div>
+
+            <div class="subtitle">Publish and share daily devotionals.</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(jpg/portfolio12.jpg)"></div>
+          <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="png/toastability.png" alt="">
+            </div>
+
+            <div class="subtitle">Easy way to manage the digital life of your bar or restaurant.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer-sec mt-5 mx-auto">
+    <div class="container">
+        <div class="row">
+            <div class="column footer-widget">
+                <h4>About Us</h4>
+                <p>Out motto - <br>" The client is always right! ".</p>
+                <div class="footer-logo">
+                    <h3 class="text-white">Internet Store</h3>
+                </div>
+            </div>
+            <div class="column footer-widget">
+                <h4>Contact Info</h4>
+                <div class="footer-address">
+                    <p>Your Address Goes Here</p>
+                    <span>Phone: +7-(7252)-49-31-60</span>
+                    <span>email: ibusiness.group@gmail.com</span>
+                </div>
+            </div>
+            <div class="column footer-widget">
+                <h4> Important Links</h4>
+                <ul>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">Planet Store</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Discounts</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+
+            </div>
+           <div class="column footer-widget">
+                <h4> Newsletter</h4>
+                <p>Write down your own email adress and we will sent you a message.</p>
+                <div class="form-wrap">
+                    <form>
+                        <div class="input-group">
+                            <input type="email"class="form-control" name="Email"placeholder="Email Address">
+                            <div class="input-group-append">
+                                <button class="btn click-btn" type="submit">
+                                    <i class="fab fa-telegram-plane"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer-bottom row align-items-center text-center
+            text-lg-left no-gutters">
+            <p class="footer-text column">
+                Copyright #<script>document.write(new Date().getFullYear());</script>
+                All rights Reserved IBusiness Group 
+                <i class="fas fa-heart" aria-hidden="true"></i>
+                Powered by AAB 
+            </p>
+            <div class="column text-center text-lg-right footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        
+        
+        </div>
+
+        </div>
+    </div>
+</footer>
+
+    
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script>
+ function button(){
+    document.getElementById("nav").classList.toggle("active");
+}
+
+       const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+     </script>
+   
+
+</body>
+</html>
